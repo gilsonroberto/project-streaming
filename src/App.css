@@ -9,8 +9,13 @@ body {
   color: #FFF;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 .lists {
   margin-top: -150px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
