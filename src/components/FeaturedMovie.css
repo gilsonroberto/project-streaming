@@ -91,14 +91,20 @@
 @media (max-width: 767px) {
     .featured {
         height: 66vh;
-        background: repeat-x;
-        background-size: 86vh;
-        background-position: right top;
+        /* background: repeat-x !important; */
+        background-repeat: no-repeat !important;
+        background-size: 86vh !important;
+        background-position: top !important;
     }
 
     .featured--horizontal {
         background: linear-gradient(to right, #111 5%, transparent 95%);
     }
+
+    .featured--vertical {
+        background: linear-gradient(to top, #111 30%, transparent 70%);
+    }
+
 
     .featured--name {
         font-size: 40px;
