@@ -15,7 +15,6 @@ export default () => {
     const loadAll = async () => {
       let list = await tmdb.getHomeList();
       setMovieList(list);
-      // console.log(list)
       let originals = list.filter(i => i.slug === 'originals');
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
       let chosen = originals[0].items.results[randomChosen];
@@ -49,6 +48,16 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+      <footer>
+        Criando com React <span role='img' aria-label='heart'></span><br />
+        Criando com React <span role='img' aria-label='heart'></span><br />
+        Criando com React <span role='img' aria-label='heart'></span><br />
+      </footer>
+      {movieList.length <= 0 &&
+        <div className='loading'>
+          <img src='https://media.wired.com/photos/592744d3f3e2356fd800bf00/master/w_960,c_limit/Netflix_LoadTime.gif ' alt='Carregando' />
+        </div>
+      }
     </div>
   );
 }
