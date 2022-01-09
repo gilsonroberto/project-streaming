@@ -6,8 +6,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 export default ({title, items}) => {
 
     const [ scrollX, setScrollX ] = useState(0);
-    const [ displayArrow, setDisplayArrow ] = useState('')
-
+    
     const handleLeftArrow = () => {
         let x = scrollX + Math.round(window.innerWidth / 2)
         if(x > 0) { 
@@ -23,7 +22,6 @@ export default ({title, items}) => {
             x = (window.innerWidth - listW) - 60;
         }
         setScrollX(x)
-        // scrollX < 0 ? setDisplayArrow('none') : setDisplayArrow('')
     }
 
     return (
@@ -32,9 +30,9 @@ export default ({title, items}) => {
             <div 
                 className='movieRow--left'
                 onClick={handleLeftArrow}
-                style={{display: displayArrow}}
+                style={{display: scrollX === 0 ? 'none' : ''}}
             >
-                <NavigateBeforeIcon style={{fontSize: 50}}/>
+                <NavigateBeforeIcon style={{fontSize: 50 }}/>
             </div>
             <div 
                 className='movieRow--right'

@@ -60,3 +60,10 @@
     opacity: 1;
 }
 
+@media (max-width: 767px) {
+    .movieRow--left,
+    .movieRow--right {
+        opacity: 1;
+    }    
+}
+
