@@ -90,7 +90,14 @@
 
 @media (max-width: 767px) {
     .featured {
-        height: 90vh;
+        height: 66vh;
+        background: repeat-x;
+        background-size: 86vh;
+        background-position: right top;
+    }
+
+    .featured--horizontal {
+        background: linear-gradient(to right, #111 5%, transparent 95%);
     }
 
     .featured--name {
